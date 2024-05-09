@@ -20,6 +20,7 @@
     font-size: larger;
     letter-spacing: 3px;
     transition: 0.7s;
+    transition-delay: 0.5s;
 }
 
 .portfolio__header:hover {
@@ -33,19 +34,29 @@
     text-align: justify;
     line-height: 1.5;
     border-bottom: 1px solid rgba(255, 255, 255, 0.712);
-    box-shadow: 0px 8px 12px -11px #818179;
     transition:
         box-shadow 1s,
         padding 1s,
-        text-align 3s,
         background 2.5s,
         border-radius 2.5s;
+    transition-delay: 0.5s;
 }
 
 .portfolio__description:hover {
-    text-align: center;
     padding: 15px;
     background-color: rgb(39 47 64);
     border-radius: 8px;
+    box-shadow: 0px 8px 12px -11px #818179;
+}
 
+.portfolio__gif {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.portfolio__gif:hover {
+    width: 100%;
 }
