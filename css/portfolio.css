@@ -6,13 +6,14 @@
     box-shadow: 0px 0px 4px -1px #6b6b68;
     transition: 0.3s;
     max-width: 60%;
+    background-color: #273045;
 }
 
 .portfolio:hover {
     box-shadow: 0px 0px 8px -1px #6b6b68;
 }
 
-.portfolio__header {
+.portfolio__mainHeader {
     display: block;
     text-align: center;
     color: white;
@@ -23,7 +24,7 @@
     transition-delay: 0.5s;
 }
 
-.portfolio__header:hover {
+.portfolio__mainHeader:hover {
     color: rgba(252, 252, 252, 0.664);
     font-size: large;
     font-weight: normal;
@@ -44,7 +45,7 @@
 
 .portfolio__description:hover {
     padding: 15px;
-    background-color: rgb(39 47 64);
+    background-color: rgb(52, 61, 81);
     border-radius: 8px;
     box-shadow: 0px 8px 12px -11px #818179;
 }
@@ -61,16 +62,22 @@
     width: 100%;
 }
 
+.portfolio__gif--hidden {
+    display: none;
+}
+
 .portfolio__gifDescription {
     font-size: small;
     font-weight: 200;
-    width: 60%;
+    width: 100%;
     text-align: center;
     margin: auto;
+    padding-bottom: 15px;
     color: rgba(255, 255, 255, 0.682);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.712);
 }
 
-.portfolio__button{
+.portfolio__button {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -80,19 +87,44 @@
     border: 3px solid #5c1926;
     border-bottom: 10px solid #5c1926;
     border-radius: 10px;
-    transition: 
+    transition:
         background 0.7s,
         border-top 0.2s,
         border 0.2s;
 }
 
-.portfolio__button:hover{
+.portfolio__button:hover {
     background-color: #903245;
     border: 3px solid #7d1d30;
     border-bottom: 10px solid #7d1d30;
 }
 
-.portfolio__button:active{
+.portfolio__button:active {
     border: 3px solid #7d1d30;
     border-top: 10px solid #7d1d30;
+}
+
+.portfolio__technologiesHeader {
+    margin: 15px auto;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.portfolio__technologiesItem {
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.portfolio__technologiesItem--html {
+    color: rgb(252, 62, 24);
+}
+
+.portfolio__technologiesItem--css {
+    color: rgb(25, 174, 255);
+}
+
+.portfolio__technologiesItem--js {
+    color: yellow;
 }
