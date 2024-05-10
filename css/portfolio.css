@@ -80,4 +80,19 @@
     border: 3px solid #5c1926;
     border-bottom: 10px solid #5c1926;
     border-radius: 10px;
+    transition: 
+        background 0.7s,
+        border-top 0.2s,
+        border 0.2s;
+}
+
+.portfolio__button:hover{
+    background-color: #903245;
+    border: 3px solid #7d1d30;
+    border-bottom: 10px solid #7d1d30;
+}
+
+.portfolio__button:active{
+    border: 3px solid #7d1d30;
+    border-top: 10px solid #7d1d30;
 }
