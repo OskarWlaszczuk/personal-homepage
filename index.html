@@ -23,9 +23,9 @@
 
     <nav>
         <ul>
-            <li><a href="#o-mnie">O mnie</a></li>
-            <li><a href="#inne-pasje">Inne pasje</a></li>
-            <li><a href="#plany-na-przyszłość">Plany na przyszłość</a></li>
+            <li class="portfolio__listItem"><a href="#o-mnie">O mnie</a></li>
+            <li class="portfolio__listItem"><a href="#inne-pasje">Inne pasje</a></li>
+            <li class="portfolio__listItem"><a href="#plany-na-przyszłość">Plany na przyszłość</a></li>
         </ul>
     </nav>
 
@@ -63,20 +63,29 @@
 
     <div class="portfolio">
         <header>
-            <a class="portfolio__header" title="Kalkulator Bmi" target="_blank" rel="noreferrer noopener"
+            <a class="portfolio__mainHeader" title="Kalkulator Bmi" target="_blank" rel="noreferrer noopener"
                 href="https://oskarwlaszczuk.github.io/bmi-calculator/">
                 Kalkulator BMI
             </a>
         </header>
+
         <p class="portfolio__description">
             Zdrowie to największy skarb, dlatego upewnij się, że trzymasz je na odpowiednim poziomie. W łatwy i szybki
             sposób, sprawdź swój wskaźnik BMI, za pomocą mojego kalkulatora!
         </p>
-        <img class="portfolio__gif"
+
+        <img class="portfolio__gif js-portfolioGif"
             src="https://raw.githubusercontent.com/OskarWlaszczuk/personal-homepage/7e1c75832aa0ce0f0b9b5801cb61ee08fe7dc7f4/img/portfolio-bmi-calculator-gif.gif"
             alt="portfolio bmi-calculator gif">
         <button class="portfolio__button">Ukryj gif</button>
-        <p class="portfolio__gifDescription">Gif wykonano za pomocą aplikacji <i>ScreenToGif</i></p>
+        <p class="portfolio__gifDescription js-removeGifButton">Gif wykonano za pomocą aplikacji <i>ScreenToGif</i></p>
+
+        <header class="portfolio__technologiesHeader">
+            Technologię
+        </header>
+        <p class="portfolio__technologiesItem portfolio__technologiesItem--html">HTML</p>
+        <p class="portfolio__technologiesItem portfolio__technologiesItem--css">CSS</p>
+        <p class="portfolio__technologiesItem portfolio__technologiesItem--js">JS</p>
     </div>
 </body>
 
