@@ -20,15 +20,10 @@
     color: white;
     font-weight: bold;
     font-size: larger;
-    letter-spacing: 3px;
-    transition: 0.7s;
-    transition-delay: 0.5s;
 }
 
 .portfolio__mainHeader:hover {
-    color: rgba(252, 252, 252, 0.664);
-    font-size: large;
-    font-weight: normal;
+    color: #adadad;
 }
 
 .portfolio__description {
