@@ -13,60 +13,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/nav.css">
     <script defer src="js/script.js"></script>
 </head>
 
 <body class="body">
+
+    <nav class="navigation">
+        <p class="navigation__linkContainer"><a class="navigation__linkItem" href="#o-mnie">O mnie</a></p>
+        <p class="navigation__linkContainer"><a class="navigation__linkItem" href="#inne-pasje">Inne pasje</a></p>
+        <p class="navigation__linkContainer"><a class="navigation__linkItem" href="#plany-na-przyszłość">Plany na
+                przyszłość</a></p>
+        <p class="navigation__linkContainer"><a class="navigation__linkItem" href="#portfolio">Portfolio</a></p>
+    </nav>
+
     <header>
         <h1>Personal Homepage</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li class="portfolio__listItem"><a href="#o-mnie">O mnie</a></li>
-            <li class="portfolio__listItem"><a href="#inne-pasje">Inne pasje</a></li>
-            <li class="portfolio__listItem"><a href="#plany-na-przyszłość">Plany na przyszłość</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-        </ul>
-    </nav>
-
     <section id="o-mnie">
-        <article>
+        <a class="navigation__linkItem" rticle>
             <h2>O mnie</h2>
             <p>
                 Jestem młodą osobą i na codzień interesuję się sportem, dokładniej siłownią i budowaniem estetycznej
                 sylwetki,oraz okazjonalnym bieganiem. Trenowanie na siłowni jest dla mnie sprawą priorytetową, dlatego
                 staram się optymalizować pod tą dziedzinę, jak najwięcej aspektów swojego życia, jak sen, czy dieta.
             </p>
-        </article>
+            </article>
     </section>
 
     <section id="inne-pasje">
-        <article>
+        <a class="navigation__linkItem" rticle>
             <h2>Czy mam inne pasje</h2>
             <p>
                 Oczywiście, w końcu na samych ciężarach nie idzie pociągnąć. Staram się rozwijać jednocześnie na
                 płaszczyznach fizycznych, psychicznych, a także intelektualnych swojego życia. Dlatego, prócz siłowni,
                 interesuję się równolegle programowaniem i czytaniem książek.
             </p>
-        </article>
+            </article>
     </section>
 
     <section id="plany-na-przyszłość">
-        <article>
+        <a class="navigation__linkItem" rticle>
             <h2>Jakie mam plany na przyszłość?</h2>
             <p>
                 Ambitne. Zamierzam zainwestować najbliższe miesiące w porządną naukę i praktykę w dziedzinie front - end
                 developer - a i najszybciej, jak będzie to możliwe starać się aplikować na owe stanowisko w branży.
             </p>
-        </article>
+            </article>
     </section>
 
     <section id="portfolio" class="portfolio">
         <div class="portfolio__content">
             <header>
-                <a class="portfolio__mainHeader" title="Kalkulator Bmi" target="_blank" rel="noreferrer noopener"
-                    href="https://oskarwlaszczuk.github.io/bmi-calculator/">
+                <a class="navigation__linkItem" class="portfolio__mainHeader" title="Kalkulator Bmi" target="_blank"
+                    rel="noreferrer noopener" href="https://oskarwlaszczuk.github.io/bmi-calculator/">
                     Kalkulator BMI
                 </a>
             </header>
@@ -91,21 +92,23 @@
             <p class="portfolio__technologiesItem portfolio__technologiesItem--css">CSS</p>
             <p class="portfolio__technologiesItem portfolio__technologiesItem--js">JS</p>
 
-            <p><a class="portfolio__repositoryLink" title="Kalkulator BMI Repozytorium" target="_blank"
-                    rel="noreferrer noopener" href="https://github.com/OskarWlaszczuk/bmi-calculator.git">Sprawdź
+            <p><a class="navigation__linkItem" class="portfolio__repositoryLink" title="Kalkulator BMI Repozytorium"
+                    target="_blank" rel="noreferrer noopener"
+                    href="https://github.com/OskarWlaszczuk/bmi-calculator.git">Sprawdź
                     repozytorium projektu</a></p>
         </div>
 
         <div class="portfolio__content">
             <header>
-                <a class="portfolio__mainHeader" title="Lista zadań" target="_blank" rel="noreferrer noopener"
-                    href="https://oskarwlaszczuk.github.io/to-do-list/">
+                <a class="navigation__linkItem" class="portfolio__mainHeader" title="Lista zadań" target="_blank"
+                    rel="noreferrer noopener" href="https://oskarwlaszczuk.github.io/to-do-list/">
                     Lista zadań
                 </a>
             </header>
 
             <p class="portfolio__description">
-            Zakupy, czy wizyta u lekarza - proste sprawy, a jednak czasami może nam pękać głowa od ich nadmiaru! Skorzystaj z Listy zadań, i pamiętaj o  prostych, jednak, wciąż ważnych sprawy.
+                Zakupy, czy wizyta u lekarza - proste sprawy, a jednak czasami może nam pękać głowa od ich nadmiaru!
+                Skorzystaj z Listy zadań, i pamiętaj o prostych, jednak, wciąż ważnych sprawy.
             </p>
 
             <img class="portfolio__gif js-portfolioGif"
@@ -122,15 +125,16 @@
             <p class="portfolio__technologiesItem portfolio__technologiesItem--css">CSS</p>
             <p class="portfolio__technologiesItem portfolio__technologiesItem--js">JS</p>
 
-            <p><a class="portfolio__repositoryLink" title="Lista zadań - repozytorium" target="_blank"
-                    rel="noreferrer noopener" href="https://github.com/OskarWlaszczuk/to-do-list.git">Sprawdź
+            <p><a class="navigation__linkItem" class="portfolio__repositoryLink" title="Lista zadań - repozytorium"
+                    target="_blank" rel="noreferrer noopener"
+                    href="https://github.com/OskarWlaszczuk/to-do-list.git">Sprawdź
                     repozytorium projektu</a></p>
         </div>
 
         <div class="portfolio__content">
             <header>
-                <a class="portfolio__mainHeader" title="Kalkulator Bmi" target="_blank" rel="noreferrer noopener"
-                    href="https://oskarwlaszczuk.github.io/currency-converter/">
+                <a class="navigation__linkItem" class="portfolio__mainHeader" title="Kalkulator Bmi" target="_blank"
+                    rel="noreferrer noopener" href="https://oskarwlaszczuk.github.io/currency-converter/">
                     Kalkulator walut
                 </a>
             </header>
@@ -154,8 +158,9 @@
             <p class="portfolio__technologiesItem portfolio__technologiesItem--css">CSS</p>
             <p class="portfolio__technologiesItem portfolio__technologiesItem--js">JS</p>
 
-            <p><a class="portfolio__repositoryLink" title="Kalkulator BMI Repozytorium" target="_blank"
-                    rel="noreferrer noopener" href="https://github.com/OskarWlaszczuk/currency-converter.git">Sprawdź
+            <p><a class="navigation__linkItem" class="portfolio__repositoryLink" title="Kalkulator BMI Repozytorium"
+                    target="_blank" rel="noreferrer noopener"
+                    href="https://github.com/OskarWlaszczuk/currency-converter.git">Sprawdź
                     repozytorium projektu</a></p>
         </div>
     </section>
