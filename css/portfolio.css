@@ -136,3 +136,7 @@
     display: block;
     color: white;
 }
+
+.portfolio__repositoryLink:hover {
+    color: #adadad;
+}
