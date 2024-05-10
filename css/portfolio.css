@@ -69,3 +69,15 @@
     margin: auto;
     color: rgba(255, 255, 255, 0.682);
 }
+
+.portfolio__button{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+    color: white;
+    background-color: #7c2738;
+    border: 3px solid #5c1926;
+    border-bottom: 10px solid #5c1926;
+    border-radius: 10px;
+}
