@@ -50,13 +50,6 @@
     transition-delay: 0.5s;
 }
 
-.portfolio__description:hover {
-    padding: 15px;
-    background-color: rgb(52, 61, 81);
-    border-radius: 8px;
-    box-shadow: 0px 8px 12px -11px #818179;
-}
-
 .portfolio__gif {
     display: block;
     width: 90%;
