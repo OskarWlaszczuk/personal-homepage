@@ -3,7 +3,7 @@ import { Section, Image, Caption, Header, Description, ExtraContent, Content } f
 export const AboutMe = (
     { image, caption, header, description, extraContent }
 ) => (
-    <Section>
+    <Section $withoutImage>
         {image && (
             <Image src={image} alt="" />
         )}
