@@ -9,15 +9,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   };
 
-  body {
-    margin: auto;
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    grid-gap: 75px;
     padding: 15px;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: 
-      ${({ theme }) =>
-      theme.lightTheme.colors.whiteLilac
-    };
-  };
+    background-color: #FBFBFE;
+    justify-content: center;
+  }
 `;
