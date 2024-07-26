@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as MessageIcon } from "../Message.svg"
+import { ReactComponent as MessageIcon } from "../../Message.svg"
 
 export const LinkWrapper = styled.a`
     max-width: 154px;
