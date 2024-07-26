@@ -10,13 +10,14 @@ export const GlobalStyles = createGlobalStyle`
   };
 
   body {
-    margin: 0;
+    margin: auto;
+    padding: 15px;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: 
       ${({ theme }) =>
-      theme.lightTheme.backgroundColors.WhiteLilac
+      theme.lightTheme.colors.whiteLilac
     };
   };
 `;
