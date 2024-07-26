@@ -14,7 +14,8 @@ export const GlobalStyles = createGlobalStyle`
     grid-template-columns: auto;
     justify-items: center;
     grid-gap: 75px;
-    padding: 15px;
+    padding-top: 110px;
+    padding-bottom: 110px;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
