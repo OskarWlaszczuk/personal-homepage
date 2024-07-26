@@ -1,9 +1,9 @@
-import { Wrapper, Image, Caption, Header, Description, ExtraContent, Content } from "./styled";
+import { Section, Image, Caption, Header, Description, ExtraContent, Content } from "./styled";
 
 export const AboutMe = (
     { image, caption, header, description, extraContent }
 ) => (
-    <Wrapper>
+    <Section>
         {image && (
             <Image src={image} alt="" />
         )}
@@ -13,5 +13,5 @@ export const AboutMe = (
             <Description>{description}</Description>
             <ExtraContent>{extraContent}</ExtraContent>
         </Content>
-    </Wrapper>
+    </Section>
 );
