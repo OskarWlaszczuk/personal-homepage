@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Section = styled.section`
     display: grid;
@@ -7,6 +7,11 @@ export const Section = styled.section`
     max-width: 1089px;
     max-height: 384px;
     margin: auto;
+
+    ${({ $withoutImage }) => $withoutImage && css`
+        margin: 0px;
+        justify-self: baseline;
+    `};
 `;
 
 export const Content = styled.article`
@@ -37,7 +42,9 @@ export const Header = styled.h1`
 `;
 
 export const Description = styled.p`
+    max-width: 670px;
     font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 32px;
     color: ${({ theme }) =>
