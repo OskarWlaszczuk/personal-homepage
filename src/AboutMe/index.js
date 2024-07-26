@@ -4,7 +4,9 @@ export const AboutMe = (
     { image, caption, header, description, extraContent }
 ) => (
     <Wrapper>
-        <Image src={image} alt="" />
+        {image && (
+            <Image src={image} alt="" />
+        )}
         <Content>
             <Caption>{caption}</Caption>
             <Header>{header}</Header>
