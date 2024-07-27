@@ -18,8 +18,9 @@ export const LinkWrapper = styled.a`
     };
     border-radius: 4px;
     text-decoration: none;
+    transition: 0.5s;
 
-    &:focus {
+    &:hover {
         box-shadow: 0px 0px 0px 2px ${({ theme }) =>
         theme.lightTheme.colors.anakiwa
     };;
