@@ -10,6 +10,7 @@ export const Section = styled.section`
 
     ${({ $withoutImage }) => $withoutImage && css`
         margin: 0px;
+        grid-gap: 0px;
         justify-self: baseline;
     `};
 `;
@@ -39,6 +40,16 @@ export const Header = styled.h1`
     color: ${({ theme }) =>
         theme.lightTheme.colors.mineShaft
     };
+    transition: 0.5s;
+
+
+    ${({ $withoutImage }) => $withoutImage && css`
+        &:hover {
+            color: ${({ theme }) =>
+            theme.lightTheme.colors.scienceBlue
+        };
+        };
+    `};
 `;
 
 export const Description = styled.p`
@@ -54,4 +65,4 @@ export const Description = styled.p`
 
 export const ExtraContent = styled.div`
 
-`
+`;
