@@ -9,7 +9,8 @@ export const theme = {
             lightScienceBlue: "#D1D5DA4D",
             anakiwa: "#8CC2FF",
             iron: "#D1D5DA",
-
+            cornflowerBlue: "#0366D633",
+            lightViolet: "#090A3305",
         },
     },
     darkTheme: {
