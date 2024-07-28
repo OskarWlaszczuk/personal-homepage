@@ -1,8 +1,11 @@
 import { AboutMe } from "./AboutMe";
-import { HireMeLink } from "./AboutMe/HireMeLink"
+import { LinkBox } from "./LinkBox";
+import { SocialMediaIconsBar } from "./SocialMediaIconsBar";
 import { SkillsList } from "./SkillsList";
+import { PortfolioSection } from "./PortfolioSection";
 import { currentSkillList } from "./currentSkillsList";
 import { futureSkillsList } from "./futureSkillsList";
+import { StyledMessageIcon } from "./StyledMessageIcon";
 
 function App() {
   return (
@@ -17,7 +20,7 @@ function App() {
           I'm a passionate Frontend Developer in love with React,
           <br />currently looking for new job opportunities.
         </>}
-        extraContent={<HireMeLink />}
+        extraContent={<LinkBox text="Hire Me" href="mailto:oskarwlaszczuk@gmail.com" Icon={<StyledMessageIcon />} />}
       />
       <SkillsList
         header="My skillset includes 🛠️"
@@ -27,13 +30,14 @@ function App() {
         header="What I want to learn next 🚀"
         skills={futureSkillsList}
       />
+      <PortfolioSection />
       <AboutMe
         caption="Let's talk!"
         header="oskarwlaszczuk@gmail.com"
         description={<>
           I'm always open to new projects. If you have a website, dashboard, or app in mind and need help bringing your ideas to life, feel free to contact me. 👊
         </>}
-        extraContent={<HireMeLink />}
+        extraContent={<SocialMediaIconsBar />}
       />
     </>
   );
