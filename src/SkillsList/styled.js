@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Section = styled.section`
     background-color: ${({ theme }) =>
         theme.lightTheme.colors.white
-    };;
+    };
     width: 100%;
     padding: 32px;
     box-shadow: 0px 16px 58px 0px #090A3308;
