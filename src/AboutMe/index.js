@@ -1,4 +1,4 @@
-import { Section, Image, Caption, Header, Description, ExtraContent, Content } from "./styled";
+import { Section, Image, Caption, Header, Description, Content } from "./styled";
 
 export const AboutMe = ({ image, caption, header, description, extraContent }) => {
     const isImageExists = !image;
@@ -12,7 +12,7 @@ export const AboutMe = ({ image, caption, header, description, extraContent }) =
                 <Caption>{caption}</Caption>
                 <Header $withoutImage={isImageExists}>{header}</Header>
                 <Description>{description}</Description>
-                <ExtraContent>{extraContent}</ExtraContent>
+                <>{extraContent}</>
             </Content>
         </Section>
     )
