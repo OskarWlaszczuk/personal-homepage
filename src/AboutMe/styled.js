@@ -62,7 +62,3 @@ export const Description = styled.p`
         theme.lightTheme.colors.slateGray
     };
 `;
-
-export const ExtraContent = styled.div`
-
-`;
