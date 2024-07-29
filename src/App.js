@@ -17,8 +17,8 @@ function App() {
         caption="This is"
         header="Oskar Właszczuk"
         description={<>
-          I'm a passionate Frontend Developer in love with React,
-          <br />currently looking for new job opportunities.
+          👨🏻💻 I'm a passionate Frontend Developer in love with React,
+          currently looking for new job opportunities.
         </>}
         extraContent={<LinkBox text="Hire Me" href="mailto:oskarwlaszczuk@gmail.com" Icon={<StyledMessageIcon />} />}
       />
@@ -35,7 +35,7 @@ function App() {
         caption="Let's talk!"
         header="oskarwlaszczuk@gmail.com"
         description={<>
-          I'm always open to new projects. If you have a website, dashboard, or app in mind and need help bringing your ideas to life, feel free to contact me. 👊
+          I'm always open to new projects.If you have a website, dashboard, or app in mind and need help bringing your ideas to life, feel free to contact me. 👊
         </>}
         extraContent={<SocialMediaIconsBar />}
       />
