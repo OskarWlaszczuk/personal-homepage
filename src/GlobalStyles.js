@@ -9,17 +9,26 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   };
 
-  main {
+  body {
     display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
+    margin: 0px;
+    grid-template-columns: 100%;
     grid-gap: 75px;
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding: 7%;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FBFBFE;
-    justify-content: center;
-  }
+    background-color: ${({ theme }) =>
+    theme.lightTheme.colors.whiteLilac};
+    justify-items: center;
+    width: 100%;
+
+   @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
+      grid-gap: 48px;
+   };
+
+   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+      padding: 32px 16px;
+    };
+  };
 `;
