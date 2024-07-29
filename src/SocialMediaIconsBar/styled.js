@@ -8,6 +8,11 @@ export const Wrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(4, 48px);
     grid-gap: 24px;
+    margin-top: 56px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+        margin-top: 40px;
+    };
 `;
 
 export const StyledGitHubIcon = styled(GitHubIcon)`
