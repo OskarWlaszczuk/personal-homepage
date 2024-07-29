@@ -19,8 +19,15 @@ export const LinkWrapper = styled.a`
     text-decoration: none;
     transition: 0.5s;
 
+    &:focus-visible {
+        outline: none;
+        box-shadow:0px 0px 0px 4px ${({ theme }) =>
+        theme.lightTheme.colors.anakiwa
+    };
+    };
+
     &:hover {
-        box-shadow: 0px 0px 0px 2px ${({ theme }) =>
+        box-shadow: 0px 0px 0px 4px ${({ theme }) =>
         theme.lightTheme.colors.anakiwa
     };
     };
