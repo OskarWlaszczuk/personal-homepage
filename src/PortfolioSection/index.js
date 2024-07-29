@@ -34,12 +34,12 @@ export const PortfolioSection = () => {
 
                                                 <RepoHomepage>
                                                     <RepoLinkTitle>Demo:</RepoLinkTitle>
-                                                    <RepoLink key={homepage} href={homepage}> {homepage}</RepoLink>
+                                                    <RepoLink key={homepage} target="_blank" href={homepage}> {homepage}</RepoLink>
                                                 </RepoHomepage>
 
                                                 <RepoRepository>
                                                     <RepoLinkTitle>Code:</RepoLinkTitle>
-                                                    <RepoLink key={html_url} href={html_url}> {html_url}</RepoLink>
+                                                    <RepoLink key={html_url} target="_blank" href={html_url}> {html_url}</RepoLink>
                                                 </RepoRepository>
                                             </RepoLinksList>
 
