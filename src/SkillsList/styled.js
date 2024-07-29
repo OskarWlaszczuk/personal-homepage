@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+    width: 100%;
     background-color: ${({ theme }) =>
         theme.lightTheme.colors.white
     };
-    width: 100%;
     padding: 32px;
-    box-shadow: 0px 16px 58px 0px #090A3308;
+    box-shadow: 0px 0px 11px -3px #525251be;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.tablet}px) {
+        padding: 16px;
+   };
 `;
 
 export const Header = styled.h2`
@@ -20,6 +24,10 @@ export const Header = styled.h2`
     border-bottom: 1px solid ${({ theme }) =>
         theme.lightTheme.colors.iron
     };
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+        font-size: 18px;
+    };
 `;
 
 export const List = styled.ul`
@@ -29,6 +37,14 @@ export const List = styled.ul`
     padding-left: 0px;
     list-style-position: inside;
     color: #0366D6;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
+        grid-template-columns: repeat(2, auto);
+   };
+
+   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}px) {
+        grid-template-columns: auto;
+   };
 `;
 
 export const Item = styled.li`
@@ -36,6 +52,10 @@ export const Item = styled.li`
     font-weight: 400;
     color: ${({ theme }) =>
         theme.lightTheme.colors.slateGray
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+        font-size: 14px;
     };
 
     &::marker {
