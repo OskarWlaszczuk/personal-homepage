@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { ReactComponent as GitHubIcon } from "../svgs/Github.svg"
 
 export const Container = styled.section`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
 `;
 
 export const HeaderContent = styled.header`
@@ -9,12 +13,20 @@ export const HeaderContent = styled.header`
     grid-template-columns: 1fr;
     justify-items: center;
     margin-bottom: 24px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      margin-bottom: 0;
+    };
 `;
 
 export const Header = styled.h2`
     margin: 12px auto;
     font-size: 30px;
     font-weight: 900;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 18px;
+   };
 `;
 
 
@@ -22,6 +34,10 @@ export const SubHeader = styled.p`
     font-size: 28px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 17px;
+   };
 `;
 
 
@@ -35,26 +51,50 @@ export const StyledGitHubIcon = styled(GitHubIcon)`
 `;
 
 export const Repositories = styled.ul`
-   display: grid;
-    grid-gap: 32px;
-    grid-template-columns: repeat(2, min-content);
+    display: grid;
+    width: 100%;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 50%);
     justify-items: center;
     padding-left: 0px;
     list-style: none inside;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
+      grid-template-columns: 100%;
+   };
+
+   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+    grid-gap: 16px;
+   };
 `;
 
 export const Repo = styled.li`
     display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
     box-shadow: 0px -2px 50px 0px #090A3305;
     background-color: #FFFFFF;
     border: 6px solid #D1D5DA4D;
     transition: 0.3s;
     padding: 56px;
-    height: 100%;
+
     &:hover{
-        border: 6px solid ${({ theme }) =>
-    theme.lightTheme.colors.cornflowerBlue};
+      border: 6px solid ${({ theme }) => theme.lightTheme.colors.cornflowerBlue};
     };
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
+      width: 100%;
+      min-height: 400px;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+      padding: 24px;
+   };
+
+   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      padding: 24px;
+      max-width: 288px;
+   };
 `;
 
 export const RepoName = styled.h3`
@@ -64,6 +104,10 @@ export const RepoName = styled.h3`
     font-size: 24px;
     font-weight: 700;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 16px;
+   };
 `;
 
 export const RepoDescription = styled.p`
@@ -74,6 +118,10 @@ export const RepoDescription = styled.p`
   font-weight: 400;
   line-height: 25.2px;
   margin: 24px 0;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 14px;
+   };
 `;
 
 export const RepoLinksList = styled.ul`
@@ -88,6 +136,10 @@ export const RepoLinkTitle = styled.span`
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 14px;
+   };
 `;
 
 export const RepoRepository = styled.li`
@@ -97,6 +149,9 @@ export const RepoRepository = styled.li`
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+      font-size: 14px;
+   };
 `;
 
 export const RepoHomepage = styled.li`
@@ -112,4 +167,18 @@ export const RepoLink = styled.a`
   line-height: 25.2px;
   text-decoration: none;
   border-bottom: 1px solid #0366D6;
+  transition: 0.3s;
+
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+    font-size: 14px;
+    word-wrap: break-word;
+  };
+
+  &:hover {
+    filter: brightness(120%);
+  };
+
+  &:focus-visible {
+    filter: brightness(120%);
+  };
 `;
