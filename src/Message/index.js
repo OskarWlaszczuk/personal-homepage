@@ -1,14 +1,11 @@
-import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { StyledMessage } from "./styled.";
+import { selectIsDarkTheme } from "../themeSlice";
 
-export const Message = styled.p`
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.mineShaft
-    };
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0;
+export const Message = ({ content }) => {
+    const isDarkTheme = useSelector(selectIsDarkTheme);
 
-    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
-        font-size: 17px;
-    };
-`;
+    return (
+        <StyledMessage $isDarkTheme={isDarkTheme}>{content}</StyledMessage>
+    );
+};
