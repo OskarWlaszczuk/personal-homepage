@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.e6e283e8.js",
+    "main.js": "/personal-homepage/static/js/main.5669f62f.js",
     "static/js/453.61d4ab14.chunk.js": "/personal-homepage/static/js/453.61d4ab14.chunk.js",
     "static/media/DarkThemeOnButton.svg": "/personal-homepage/static/media/DarkThemeOnButton.a415d80930fe7ff812455f8d589fd27b.svg",
     "static/media/LightThemeOnButton.svg": "/personal-homepage/static/media/LightThemeOnButton.2395edf75a80d19e49bbbdce097d751c.svg",
@@ -12,10 +12,10 @@
     "static/media/Message.svg": "/personal-homepage/static/media/Message.514461521cb8d76b55e16ac430346abb.svg",
     "static/media/Facebook_black.svg": "/personal-homepage/static/media/Facebook_black.14f43e9c25d473ecd49ceaf878f965b9.svg",
     "static/media/LoadingIcon.svg": "/personal-homepage/static/media/LoadingIcon.88a075cf3a7f1af15999cb03bb3a0360.svg",
-    "main.e6e283e8.js.map": "/personal-homepage/static/js/main.e6e283e8.js.map",
+    "main.5669f62f.js.map": "/personal-homepage/static/js/main.5669f62f.js.map",
     "453.61d4ab14.chunk.js.map": "/personal-homepage/static/js/453.61d4ab14.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e6e283e8.js"
+    "static/js/main.5669f62f.js"
   ]
 }
