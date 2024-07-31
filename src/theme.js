@@ -24,7 +24,7 @@ export const theme = {
         },
     },
     breakPoints: {
-        laptop: 1200,
+        laptop: 1100,
         smallLaptop: 950,
         tablet: 730,
         mobileXl: 550,
