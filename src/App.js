@@ -1,5 +1,5 @@
 import { AboutMe } from "./AboutMe";
-import { LinkBox } from "./LinkBox";
+import { LinkBox } from "./common/LinkBox";
 import { SocialMediaIconsBar } from "./SocialMediaIconsBar";
 import { SkillsList } from "./SkillsList";
 import { PortfolioSection } from "./PortfolioSection";
@@ -24,12 +24,15 @@ function App() {
             currently looking for new job opportunities.
           </>
         }
-        extraContent={<LinkBox text="Hire Me" href="mailto:oskarwlaszczuk@gmail.com" Icon={<StyledMessageIcon />} />}
+        extraContent={
+          <LinkBox
+            text="Hire Me"
+            href="mailto:oskarwlaszczuk@gmail.com"
+            Icon={<StyledMessageIcon />}
+          />
+        }
       />
-      <SkillsList
-        header="My skillset includes 🛠️"
-        skills={currentSkillList}
-      />
+      <SkillsList header="My skillset includes 🛠️" skills={currentSkillList} />
       <SkillsList
         header="What I want to learn next 🚀"
         skills={futureSkillsList}
@@ -40,7 +43,9 @@ function App() {
         header="oskarwlaszczuk@gmail.com"
         description={
           <>
-            I'm always open to new projects.If you have a website, dashboard, or app in mind and need help bringing your ideas to life, feel free to contact me. ✌
+            I'm always open to new projects.If you have a website, dashboard, or
+            app in mind and need help bringing your ideas to life, feel free to
+            contact me. ✌
           </>
         }
         extraContent={<SocialMediaIconsBar />}
