@@ -1,7 +1,12 @@
-import { Section, Image, Caption, Header, Description, Content } from "./styled";
+import { Section, Image, Header, Description, Content } from "./styled";
+import { Caption } from "../Caption"
+import { useSelector } from "react-redux";
+import { selectIsDarkTheme } from "../themeSlice";
 
 export const AboutMe = ({ image, caption, header, description, extraContent }) => {
     const isImageExists = !image;
+
+    const isDarkTheme = useSelector(selectIsDarkTheme);
 
     return (
         <Section $withoutImage={isImageExists}>
@@ -9,9 +14,9 @@ export const AboutMe = ({ image, caption, header, description, extraContent }) =
                 <Image src={image} alt="" />
             )}
             <Content>
-                <Caption>{caption}</Caption>
-                <Header $withoutImage={isImageExists}>{header}</Header>
-                <Description>{description}</Description>
+                <Caption content={caption}/>
+                <Header $isDarkTheme={isDarkTheme} $withoutImage={isImageExists}>{header}</Header>
+                <Description $isDarkTheme={isDarkTheme}>{description}</Description>
                 <>{extraContent}</>
             </Content>
         </Section>

@@ -51,21 +51,10 @@ export const Image = styled.img`
     };
 `;
 
-export const Caption = styled.header`
-    font-size: 12px;
-    font-weight: 700;
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.slateGray
-    };
-`;
-
 export const Header = styled.h1`
     font-size: 38px;
     font-weight: 900;
     margin: 0;
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.mineShaft
-    };
     transition: 0.5s;
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
@@ -74,8 +63,11 @@ export const Header = styled.h1`
 
     ${({ $withoutImage }) => $withoutImage && css`
         &:hover {
-            color: ${({ theme }) =>
-            theme.lightTheme.colors.scienceBlue
+            color:${({ theme, $isDarkTheme }) =>
+            $isDarkTheme ?
+                theme.darkTheme.colors.dodgerBlue :
+                theme.lightTheme.colors.scienceBlue
+            };
         };
         };
     `};
@@ -87,8 +79,9 @@ export const Description = styled.p`
     font-size: 20px;
     font-size: 18px;
     font-weight: 400;
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.slateGray
+    color: ${({ theme, $isDarkTheme }) =>
+        !$isDarkTheme &&
+            theme.lightTheme.colors.slateGray
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
