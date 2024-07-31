@@ -6,10 +6,12 @@ import { PortfolioSection } from "./PortfolioSection";
 import { currentSkillList } from "./currentSkillsList";
 import { futureSkillsList } from "./futureSkillsList";
 import { StyledMessageIcon } from "./StyledMessageIcon";
+import { ToggleThemeButton } from "./ToggleThemeButton/index";
 
 function App() {
   return (
     <>
+      <ToggleThemeButton />
       <AboutMe
         image="
           https://avatars.githubusercontent.com/u/155220171?v=4
