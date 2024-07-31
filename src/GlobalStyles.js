@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   };
 
   main {
+    color: ${({ isDarkTheme, theme }) => isDarkTheme ? theme.darkTheme.colors.white : theme.lightTheme.colors.mineShaft};
     display: grid;
     margin: 0;
     grid-template-columns: 100%;
