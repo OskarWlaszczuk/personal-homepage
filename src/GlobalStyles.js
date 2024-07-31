@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { useSelector } from "react-redux";
+import { selectIsDarkTheme } from "./themeSlice";
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   };
@@ -10,25 +12,34 @@ export const GlobalStyles = createGlobalStyle`
   };
 
   body {
+    margin: 0;
+  };
+
+  main {
     display: grid;
-    margin: 0px;
+    margin: 0;
     grid-template-columns: 100%;
     grid-gap: 75px;
     padding: 7%;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: ${({ theme }) =>
-    theme.lightTheme.colors.whiteLilac};
+    background-color: ${({ isDarkTheme, theme }) => isDarkTheme ? theme.darkTheme.colors.mineShaft : theme.lightTheme.colors.whiteLilac};
     justify-items: center;
     width: 100%;
 
-   @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
       grid-gap: 48px;
-   };
+    };
 
-   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
       padding: 32px 16px;
     };
   };
 `;
+
+export const GlobalStyles = () => {
+  const isDarkTheme = useSelector(selectIsDarkTheme);
+
+  return <GlobalStyle isDarkTheme={isDarkTheme} />;
+};
