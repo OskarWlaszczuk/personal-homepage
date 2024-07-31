@@ -15,44 +15,69 @@ export const Wrapper = styled.section`
     };
 `;
 
+export const Link = styled.a`
+    
+`;
+
 export const StyledGitHubIcon = styled(GitHubIcon)`
     path {
-        fill: ${({ theme }) => theme.lightTheme.colors.mineShaft};
+        fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.white :
+            theme.lightTheme.colors.mineShaft
+    };
         transform: 0.5s;
     };
 
     &:hover {
         path {
-            fill: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
- 
+            fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
+    };
         };
     };
 `;
 
 export const StyledFacebookIcon = styled(FacebookIcon)`
     path {
-        fill: ${({ theme }) => theme.lightTheme.colors.mineShaft};
+        fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.white :
+            theme.lightTheme.colors.mineShaft
+    };
         transform: 0.5s;
     };
 
     &:hover {
         path {
-            fill: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
- 
+            fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
+    };
         };
     };
 `;
 
 export const StyledLinkedInIcon = styled(LinkedInIcon)`
      path {
-        fill: ${({ theme }) => theme.lightTheme.colors.mineShaft};
+        fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.white :
+            theme.lightTheme.colors.mineShaft
+    };
         transform: 0.5s;
     };
 
     &:hover {
         path {
-            fill: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
- 
+            fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
+    };
         };
     };
 `;
@@ -60,14 +85,21 @@ export const StyledLinkedInIcon = styled(LinkedInIcon)`
 
 export const StyledInstagramIcon = styled(InstagramIcon)`
     path {
-        fill: ${({ theme }) => theme.lightTheme.colors.mineShaft};
+        fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.white :
+            theme.lightTheme.colors.mineShaft
+    };
         transform: 1s;
     };
 
     &:hover {
         path {
-            fill: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
- 
+            fill: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
+    };
         };
     };
 `;
