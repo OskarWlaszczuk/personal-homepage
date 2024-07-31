@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     width: 100%;
-    background-color: ${({ theme }) =>
-        theme.lightTheme.colors.white
+    background-color: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.lightMineShaft :
+            theme.lightTheme.colors.white
     };
     padding: 32px;
-    box-shadow: 0px 0px 11px -3px #525251be;
+    box-shadow:  0px 0px 10px -2px ${({ theme }) =>
+        theme.lightTheme.colors.lightViolet
+    };
 
     @media (max-width: ${({ theme }) => theme.breakPoints.tablet}px) {
         padding: 16px;
@@ -14,15 +18,18 @@ export const Section = styled.section`
 `;
 
 export const Header = styled.h2`
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.mineShaft
+    color: ${({ theme, $isDarkTheme }) =>
+        !$isDarkTheme &&
+            theme.lightTheme.colors.mineShaft
     };
     font-size: 30px;
     font-weight: 900;
     margin: 0;
     padding-bottom: 15px;
-    border-bottom: 1px solid ${({ theme }) =>
-        theme.lightTheme.colors.iron
+    border-bottom: 1px solid  ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.lightIron :
+            theme.lightTheme.colors.lightScienceBlue
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
@@ -36,7 +43,6 @@ export const List = styled.ul`
     justify-content: space-between;
     padding-left: 0px;
     list-style-position: inside;
-    color: #0366D6;
 
     @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
         grid-template-columns: repeat(2, auto);
@@ -50,8 +56,9 @@ export const List = styled.ul`
 export const Item = styled.li`
     font-size: 18px;
     font-weight: 400;
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.slateGray
+    color: ${({ theme, $isDarkTheme }) =>
+        !$isDarkTheme &&
+            theme.lightTheme.colors.slateGray
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
@@ -59,8 +66,10 @@ export const Item = styled.li`
     };
 
     &::marker {
-        color: ${({ theme }) =>
-        theme.lightTheme.colors.scienceBlue
+        color: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
     };
     };
 `;
