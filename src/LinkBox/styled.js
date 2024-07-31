@@ -8,8 +8,10 @@ export const LinkWrapper = styled.a`
         minmax(auto, 24px)
         minmax(auto, 82px);
     grid-gap: 16px;
-    background-color: ${({ theme }) =>
-        theme.lightTheme.colors.scienceBlue
+    background-color: ${({ theme, $isDarkTheme }) =>
+        $isDarkTheme ?
+            theme.darkTheme.colors.dodgerBlue :
+            theme.lightTheme.colors.scienceBlue
     };
     padding: 12px 16px;
     border: 1px solid ${({ theme }) =>
@@ -17,7 +19,7 @@ export const LinkWrapper = styled.a`
     };
     border-radius: 4px;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.4s;
 
     &:focus-visible {
         outline: none;
