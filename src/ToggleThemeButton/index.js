@@ -4,14 +4,10 @@ import {
   StyledLightThemeOnButton,
 } from "./styled";
 import { Caption } from "../common/Caption";
-import { toggleTheme } from "../themeSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { selectIsDarkTheme } from "../themeSlice";
 
-export const ToggleThemeButton = () => {
-  const isDarkTheme = useSelector(selectIsDarkTheme);
-  const dispatch = useDispatch();
-  const toggleThemeHandler = () => dispatch(toggleTheme());
+export const ToggleThemeButton = ({ isDarkTheme, setIsDarkTheme }) => {
+
+  const toggleThemeHandler = () => setIsDarkTheme(currentTheme => !currentTheme);
 
   return (
     <Wrapper>
