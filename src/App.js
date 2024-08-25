@@ -6,12 +6,20 @@ import { PortfolioSection } from "./PortfolioSection";
 import { currentSkillList } from "./currentSkillsList";
 import { futureSkillsList } from "./futureSkillsList";
 import { StyledMessageIcon } from "./StyledMessageIcon";
-import { ToggleThemeButton } from "./ToggleThemeButton/index";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./GlobalStyles";
+import { useState } from "react";
+import { lightTheme } from "./theme";
+import { darkTheme } from "./theme";
 
+import { ToggleThemeButton } from "./ToggleThemeButton";
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
+
   return (
-    <>
-      <ToggleThemeButton />
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <GlobalStyles />
+      <ToggleThemeButton isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
       <AboutMe
         image="
           https://avatars.githubusercontent.com/u/155220171?v=4
@@ -50,7 +58,7 @@ function App() {
         }
         extraContent={<SocialMediaIconsBar />}
       />
-    </>
+    </ThemeProvider>
   );
 }
 
