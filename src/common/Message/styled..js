@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const StyledMessage = styled.p`
-   color: ${({ theme, $isDarkTheme }) =>
-        !$isDarkTheme &&
-        theme.lightTheme.colors.mineShaft
-    };
+   color: ${({ theme }) => theme.colors.mineShaft};
     font-size: 20px;
     font-weight: 400;
     margin: 0;

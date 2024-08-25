@@ -8,15 +8,13 @@ export const LinkWrapper = styled.a`
         minmax(auto, 24px)
         minmax(auto, 82px);
     grid-gap: 16px;
-    background-color: ${({ theme, $isDarkTheme }) =>
-        $isDarkTheme ?
-            theme.darkTheme.colors.dodgerBlue :
-            theme.lightTheme.colors.scienceBlue
+    background-color: ${({ theme }) =>
+        theme.colors.dodgerBlue ||
+        theme.colors.scienceBlue
     };
     padding: 12px 16px;
     border: 1px solid ${({ theme }) =>
-        theme.lightTheme.colors.lightScienceBlue
-    };
+        theme.colors.lightScienceBlue || theme.colors.lightIron};
     border-radius: 4px;
     text-decoration: none;
     transition: 0.4s;
@@ -24,14 +22,12 @@ export const LinkWrapper = styled.a`
     &:focus-visible {
         outline: none;
         box-shadow:0px 0px 0px 4px ${({ theme }) =>
-        theme.lightTheme.colors.anakiwa
-    };
+        theme.colors.anakiwa || theme.colors.shipCove};
     };
 
     &:hover {
         box-shadow: 0px 0px 0px 4px ${({ theme }) =>
-        theme.lightTheme.colors.anakiwa
-    };
+        theme.colors.anakiwa || theme.colors.shipCove};
     };
 
     ${({ $withoutIcon }) => $withoutIcon && css`
@@ -42,9 +38,7 @@ export const LinkWrapper = styled.a`
 `;
 
 export const LinkText = styled.span`
-    color: ${({ theme }) =>
-        theme.lightTheme.colors.white
-    };
+    color: ${({ theme }) => theme.colors.lightThemeWhite || theme.colors.white};
     max-height: 25px;
     text-align: center;
     font-size: 20.06px;

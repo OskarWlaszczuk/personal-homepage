@@ -2,35 +2,25 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     width: 100%;
-    background-color: ${({ theme, $isDarkTheme }) =>
-        $isDarkTheme ?
-            theme.darkTheme.colors.lightMineShaft :
-            theme.lightTheme.colors.white
-    };
+    background-color: 
+        ${({ theme }) => theme.colors.lightMineShaft || theme.colors.white};
     padding: 32px;
-    box-shadow:  0px 0px 10px -2px ${({ theme }) =>
-        theme.lightTheme.colors.lightViolet
-    };
-
+    box-shadow:  0px 0px 10px -2px 
+        ${({ theme }) => theme.colors.lightViolet || theme.colors.coldViolet};
+       
     @media (max-width: ${({ theme }) => theme.breakPoints.tablet}px) {
         padding: 16px;
    };
 `;
 
 export const Header = styled.h2`
-    color: ${({ theme, $isDarkTheme }) =>
-        !$isDarkTheme &&
-            theme.lightTheme.colors.mineShaft
-    };
+    color: ${({ theme }) => theme.colors.lightThemeMineShaft || theme.colors.white};
     font-size: 30px;
     font-weight: 900;
     margin: 0;
     padding-bottom: 15px;
-    border-bottom: 1px solid  ${({ theme, $isDarkTheme }) =>
-        $isDarkTheme ?
-            theme.darkTheme.colors.lightIron :
-            theme.lightTheme.colors.lightScienceBlue
-    };
+    border-bottom: 1px solid  
+        ${({ theme }) => theme.colors.lightIron || theme.colors.lightScienceBlue};
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
         font-size: 18px;
@@ -56,20 +46,13 @@ export const List = styled.ul`
 export const Item = styled.li`
     font-size: 18px;
     font-weight: 400;
-    color: ${({ theme, $isDarkTheme }) =>
-        !$isDarkTheme &&
-            theme.lightTheme.colors.slateGray
-    };
+    color: ${({ theme }) => theme.colors.slateGray};
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
         font-size: 14px;
     };
 
     &::marker {
-        color: ${({ theme, $isDarkTheme }) =>
-        $isDarkTheme ?
-            theme.darkTheme.colors.dodgerBlue :
-            theme.lightTheme.colors.scienceBlue
-    };
+        color: ${({ theme }) => theme.colors.dodgerBlue || theme.colors.scienceBlue};
     };
 `;

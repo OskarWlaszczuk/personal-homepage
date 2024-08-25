@@ -12,7 +12,7 @@ export const HeaderContent = styled.header`
   justify-items: center;
   margin-bottom: 24px;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     margin-bottom: 0;
   }
 `;
@@ -21,10 +21,9 @@ export const Header = styled.h2`
   margin: 12px 0;
   font-size: 30px;
   font-weight: 900;
-  color: ${({ theme, $isDarkTheme }) =>
-    !$isDarkTheme && theme.lightTheme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.lightThemeMineShaft || theme.colors.white};
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 18px;
   }
 `;
@@ -33,10 +32,9 @@ export const SubHeader = styled.p`
   font-size: 28px;
   font-weight: 400;
   margin: 0;
-  color: ${({ theme, $isDarkTheme }) =>
-    !$isDarkTheme && theme.lightTheme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.lightThemeMineShaft || theme.colors.white};
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 17px;
   }
 `;
@@ -45,19 +43,19 @@ export const StyledGitHubIcon = styled(GitHubIcon)`
   max-width: 40px;
   max-height: 40px;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     max-width: 32px;
     max-height: 32px;
   }
   path {
-    fill: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
+    fill: ${({ theme }) => theme.colors.scienceBlue || theme.colors.dodgerBlue};
   }
 `;
 
 export const Repositories = styled.ul`
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 0.5fr);
   justify-items: center;
   padding-left: 0px;
 
@@ -65,31 +63,28 @@ export const Repositories = styled.ul`
     grid-template-columns: 1fr;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     grid-gap: 16px;
   }
 `;
 
-export const Repo = styled.li`
+export const Repo = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: 100%;
   align-items: center;
-  background-color: ${({ theme, $isDarkTheme }) =>
-    $isDarkTheme
-      ? theme.darkTheme.colors.lightMineShaft
-      : theme.lightTheme.colors.white};
+  background-color: 
+    ${({ theme }) => theme.colors.lightMineShaft || theme.colors.white};
 
-  border: 6px solid ${({ theme }) => theme.lightTheme.colors.lightScienceBlue};
+  border: 6px solid 
+    ${({ theme }) => theme.colors.lightScienceBlue || theme.colors.lightIron};
   transition: 0.3s;
   padding: 56px;
 
   &:hover {
-    border: 6px solid
-      ${({ theme, $isDarkTheme }) =>
-        $isDarkTheme
-          ? theme.darkTheme.colors.grayScienceBlue
-          : theme.lightTheme.colors.cornflowerBlue};
+    border: 6px solid ${({ theme }) =>
+    theme.colors.cornflowerBlue ||
+    theme.colors.grayScienceBlue};
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
@@ -97,37 +92,31 @@ export const Repo = styled.li`
     min-height: 400px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     padding: 24px;
     max-width: 288px;
   }
 `;
 
 export const RepoName = styled.h3`
-  color: ${({ theme, $isDarkTheme }) =>
-    $isDarkTheme
-      ? theme.darkTheme.colors.white
-      : theme.lightTheme.colors.scienceBlue};
+  color: ${({ theme }) => theme.colors.scienceBlue || theme.colors.white};
   font-size: 24px;
   font-weight: 700;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 16px;
   }
 `;
 
 export const RepoDescription = styled.p`
-  color: ${({ theme, $isDarkTheme }) =>
-    $isDarkTheme
-      ? theme.darkTheme.colors.white
-      : theme.lightTheme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.slateGray || theme.colors.white};
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
   margin: 24px 0;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
   }
 `;
@@ -138,25 +127,22 @@ export const RepoLinksList = styled.ul`
 `;
 
 export const RepoLinkTitle = styled.span`
-  color: ${({ theme, $isDarkTheme }) =>
-    $isDarkTheme
-      ? theme.darkTheme.colors.white
-      : theme.lightTheme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.slateGray || theme.colors.white};
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
-  }
+  };
 `;
 
 export const RepoRepository = styled.li`
-  color: ${({ theme }) => theme.lightTheme.colors.scienceBlue};
+  color: ${({ theme }) => theme.colors.scienceBlue};
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
   }
 `;
@@ -166,22 +152,18 @@ export const RepoHomepage = styled.li`
 `;
 
 export const RepoLink = styled.a`
-  color: ${({ theme, $isDarkTheme }) =>
-    $isDarkTheme
-      ? theme.darkTheme.colors.dodgerBlue
-      : theme.lightTheme.colors.scienceBlue};
+  color: ${({ theme }) =>
+    theme.colors.dodgerBlue ||
+    theme.colors.scienceBlue};
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
   text-decoration: none;
   border-bottom: 1px solid
-    ${({ theme, $isDarkTheme }) =>
-      $isDarkTheme
-        ? theme.darkTheme.colors.dodgerBlue
-        : theme.lightTheme.colors.scienceBlue};
+    ${({ theme }) => theme.colors.dodgerBlue || theme.colors.scienceBlue};
   transition: 0.3s;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
     word-wrap: break-word;
   }

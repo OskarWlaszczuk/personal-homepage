@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h3`
-   color: ${({ theme, $isDarkTheme }) =>
-        !$isDarkTheme &&
-        theme.lightTheme.colors.mineShaft
-    };
+    color: ${({ theme }) => theme.colors.mineShaft};
     font-size: 24px;
     font-weight: 700;
     margin: 0;

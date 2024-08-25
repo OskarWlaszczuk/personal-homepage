@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCaption = styled.header`
-    font-size: 12px;
-    font-weight: 700;
-    color:${({ theme, $isDarkTheme }) =>
-        !$isDarkTheme &&
-            theme.lightTheme.colors.slateGray
-    };
+  font-size: 12px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.slateGray || theme.colors.white};
 `;
