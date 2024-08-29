@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Section = styled.section`
   display: grid;
@@ -10,16 +10,16 @@ export const Section = styled.section`
     grid-template-columns: 1fr;
     grid-gap: 16px;
     width: 100%;
-  }
+  };
 
   @media (max-width: ${({ theme }) => theme.breakPoints.tablet}px) {
     grid-template-columns: 100%;
     grid-gap: 16px;
-  }
+  };
+`;
 
-  ${({ $withoutImage }) => $withoutImage && css`
-      grid-gap: 0px;
-  `};
+export const SectionWithoutImage = styled(Section)`
+  grid-gap: 0px;
 `;
 
 export const Content = styled.article`
@@ -61,13 +61,13 @@ export const Header = styled.h1`
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
       font-size: 19px;
-    }
+    };
+`;
 
-    ${({ $withoutImage }) => $withoutImage && css`
-        &:hover {
-          color:${({ theme }) => theme.colors.dodgerBlue || theme.colors.scienceBlue};
-        };
-    `};
+export const HeaderWithoutImage = styled(Header)`
+  &:hover {
+    color:${({ theme }) => theme.colors.dodgerBlue || theme.colors.scienceBlue};
+  };
 `;
 
 export const Description = styled.p`
