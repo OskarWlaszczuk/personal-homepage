@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     color: ${({ theme }) => theme.colors.lightThemeMineShaft || theme.colors.white};
     display: grid;
+    word-break: break-word;
     margin: 0;
     grid-template-columns: 100%;
     grid-gap: 75px;
