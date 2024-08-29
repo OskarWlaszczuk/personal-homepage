@@ -23,6 +23,7 @@ import {
 import { Error } from "./Error";
 import { Loading } from "./Loading";
 import { useDispatch, useSelector } from "react-redux";
+import { loadingStatus, errorStatus } from "../fetchStatuses";
 
 export const PortfolioSection = () => {
   const repositories = useSelector(selectRepositories);
@@ -31,11 +32,41 @@ export const PortfolioSection = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const timeoutOfGettingResponseId = setTimeout(() => {
-      dispatch(fetchRepositories());
-    }, 1000);
-    return () => clearTimeout(timeoutOfGettingResponseId);
+    const fetchDelayId = setTimeout(() => dispatch(fetchRepositories()), 1000);
+    return () => clearTimeout(fetchDelayId);
   }, [dispatch]);
+
+  const renderRepositories = () => {
+    return repositories.map(({ name, description, html_url, homepage }) => (
+      <Repo key={name}>
+        <RepoName>{name}</RepoName>
+        <RepoDescription>{description}</RepoDescription>
+        <RepoLinksList>
+          <RepoHomepage>
+            <RepoLinkTitle>Demo:</RepoLinkTitle>{" "}
+            <RepoLink key={homepage} target="_blank" href={homepage}>{homepage}</RepoLink>
+          </RepoHomepage>
+          <RepoRepository>
+            <RepoLinkTitle>Code:</RepoLinkTitle>{" "}
+            <RepoLink key={html_url} target="_blank" href={html_url}>{html_url}</RepoLink>
+          </RepoRepository>
+        </RepoLinksList>
+      </Repo>
+    ));
+  };
+
+  const isLoading = status === loadingStatus;
+  const isError = status === errorStatus;
+
+  const portfolioContent = (
+    isLoading ?
+      <Loading /> :
+      isError ?
+        <Error /> :
+        <Repositories>
+          {renderRepositories()}
+        </Repositories>
+  );
 
   return (
     <Container>
@@ -44,52 +75,7 @@ export const PortfolioSection = () => {
         <Header>Portfolio</Header>
         <SubHeader>My recent projects</SubHeader>
       </HeaderContent>
-      {status === "loading" ? (
-        <Loading />
-      ) : status === "error" ? (
-        <Error />
-      ) : (
-        <Repositories>
-          {repositories.map(({ name, description, html_url, homepage }) => (
-            <Repo key={name}>
-              <RepoName>
-                {name.charAt(0).toUpperCase() + name.slice(1)}
-              </RepoName>
-              <RepoDescription>
-                {description}
-              </RepoDescription>
-              <RepoLinksList>
-                <RepoHomepage>
-                  <RepoLinkTitle>
-                    Demo:
-                  </RepoLinkTitle>{" "}
-                  <RepoLink
-                    key={homepage}
-                    target="_blank"
-                    href={homepage}
-
-                  >
-                    {homepage}
-                  </RepoLink>
-                </RepoHomepage>
-                <RepoRepository>
-                  <RepoLinkTitle>
-                    Code:
-                  </RepoLinkTitle>{" "}
-                  <RepoLink
-
-                    key={html_url}
-                    target="_blank"
-                    href={html_url}
-                  >
-                    {html_url}
-                  </RepoLink>
-                </RepoRepository>
-              </RepoLinksList>
-            </Repo>
-          ))}
-        </Repositories>
-      )}
+      {portfolioContent}
     </Container>
   );
 };
