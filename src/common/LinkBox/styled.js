@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const LinkWrapper = styled.a`
     max-width: 154px;
@@ -29,12 +29,12 @@ export const LinkWrapper = styled.a`
         box-shadow: 0px 0px 0px 4px ${({ theme }) =>
         theme.colors.anakiwa || theme.colors.shipCove};
     };
+`;
 
-    ${({ $withoutIcon }) => $withoutIcon && css`
-       display: unset;
-       max-width: unset;
-       max-height: unset;
-    `};
+export const LinkWrapperWithoutIcon = styled(LinkWrapper)`
+    display: unset;
+    max-width: unset;
+    max-height: unset;
 `;
 
 export const LinkText = styled.span`
