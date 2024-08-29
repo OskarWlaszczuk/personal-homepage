@@ -1,4 +1,4 @@
-import { Section, Image, Header, Description, Content } from "./styled";
+import { Section, SectionWithoutImage, Image, Header, HeaderWithoutImage, Description, Content } from "./styled";
 import { Caption } from "../common/Caption";
 export const AboutMe = ({
   image,
@@ -7,19 +7,21 @@ export const AboutMe = ({
   description,
   extraContent,
 }) => {
-  const isImageExists = !image;
+  const useImageLayout = !!image;
 
+  const SectionComponent = useImageLayout ? Section : SectionWithoutImage;
+  const HeaderComponent = useImageLayout ? Header : HeaderWithoutImage;
+  const imageElement = useImageLayout && <Image src={image} alt="Oskar Właszczuk" />
+  
   return (
-    <Section $withoutImage={isImageExists}>
-      {!isImageExists && <Image src={image} alt="" />}
+    <SectionComponent>
+      {imageElement}
       <Content>
         <Caption content={caption} />
-        <Header $withoutImage={isImageExists}>
-          {header}
-        </Header>
+        <HeaderComponent>{header}</HeaderComponent>
         <Description>{description}</Description>
         {extraContent}
       </Content>
-    </Section>
+    </SectionComponent>
   );
 };
