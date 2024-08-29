@@ -14,16 +14,14 @@ import { darkTheme } from "./theme";
 
 import { ToggleThemeButton } from "./ToggleThemeButton";
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyles />
       <ToggleThemeButton isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
       <AboutMe
-        image="
-          https://avatars.githubusercontent.com/u/155220171?v=4
-        "
+        image="https://avatars.githubusercontent.com/u/155220171?v=4"
         caption="This is"
         header="Oskar Właszczuk"
         description={
