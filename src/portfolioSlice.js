@@ -1,19 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loadingStatus, successStatus, errorStatus } from "./fetchStatuses";
 
 export const portfolioSlice = createSlice({
   name: "portfolio",
   initialState: {
     repositories: [],
-    status: "loading",
+    status: loadingStatus,
   },
   reducers: {
-    fetchRepositories: () => {},
+    fetchRepositories: () => { },
     fetchRepositoriesSuccess: (state, { payload: repositories }) => {
       state.repositories = repositories;
-      state.status = "succes;";
+      state.status = successStatus;
     },
     fetchRepositoriesError: (state) => {
-      state.status = "error";
+      state.status = errorStatus;
     },
   },
 });
