@@ -1,17 +1,15 @@
-import { LinkWrapper, LinkText } from "./styled";
+import { LinkWrapper, LinkWrapperWithoutIcon, LinkText } from "./styled";
 
 export const LinkBox = ({ href, text, Icon }) => {
-    const isIconExists = !Icon
+    const isIconExists = !!Icon
+
+    const LinkWrapperComponent = isIconExists ? LinkWrapper : LinkWrapperWithoutIcon;
+    const iconElement = isIconExists && Icon;
 
     return (
-        <LinkWrapper
-            $withoutIcon={isIconExists}
-            href={href}
-        >
-            {!isIconExists && (
-                Icon
-            )}
+        <LinkWrapperComponent href={href}>
+            {iconElement}
             <LinkText>{text}</LinkText>
-        </LinkWrapper>
-    )
+        </LinkWrapperComponent>
+    );
 };
