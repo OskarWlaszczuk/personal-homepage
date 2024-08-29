@@ -14,7 +14,7 @@ export const HeaderContent = styled.header`
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     margin-bottom: 0;
-  }
+  };
 `;
 
 export const Header = styled.h2`
@@ -25,7 +25,7 @@ export const Header = styled.h2`
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 18px;
-  }
+  };
 `;
 
 export const SubHeader = styled.p`
@@ -36,7 +36,7 @@ export const SubHeader = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 17px;
-  }
+  };
 `;
 
 export const StyledGitHubIcon = styled(GitHubIcon)`
@@ -46,10 +46,11 @@ export const StyledGitHubIcon = styled(GitHubIcon)`
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     max-width: 32px;
     max-height: 32px;
-  }
+  };
+
   path {
     fill: ${({ theme }) => theme.colors.scienceBlue || theme.colors.dodgerBlue};
-  }
+  };
 `;
 
 export const Repositories = styled.ul`
@@ -59,25 +60,23 @@ export const Repositories = styled.ul`
   justify-items: center;
   padding-left: 0px;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.laptopS}px) {
     grid-template-columns: 1fr;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     grid-gap: 16px;
-  }
+  };
 `;
 
-export const Repo = styled.div`
+export const Repo = styled.li`
   display: grid;
   width: 100%;
   grid-template-columns: 100%;
   align-items: center;
-  background-color: 
-    ${({ theme }) => theme.colors.lightMineShaft || theme.colors.white};
 
+  background-color: 
+    ${({ theme }) => theme.colors.lightThemeWhite || theme.colors.lightMineShaft};
   border: 6px solid 
     ${({ theme }) => theme.colors.lightScienceBlue || theme.colors.lightIron};
+
   transition: 0.3s;
   padding: 56px;
 
@@ -85,28 +84,23 @@ export const Repo = styled.div`
     border: 6px solid ${({ theme }) =>
     theme.colors.cornflowerBlue ||
     theme.colors.grayScienceBlue};
-  }
+  };
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
-    width: 100%;
-    min-height: 400px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.laptopL}px) {
+    min-height: 350px;
     padding: 24px;
-    max-width: 288px;
-  }
+  };
 `;
 
 export const RepoName = styled.h3`
-  color: ${({ theme }) => theme.colors.scienceBlue || theme.colors.white};
+ color: ${({ theme }) => theme.colors.scienceBlue || theme.colors.lightThemeWhite};
   font-size: 24px;
   font-weight: 700;
   margin: 0;
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 16px;
-  }
+  };
 `;
 
 export const RepoDescription = styled.p`
@@ -118,7 +112,7 @@ export const RepoDescription = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
-  }
+  };
 `;
 
 export const RepoLinksList = styled.ul`
@@ -142,9 +136,10 @@ export const RepoRepository = styled.li`
   font-size: 18px;
   font-weight: 400;
   line-height: 25.2px;
+
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
-  }
+  };
 `;
 
 export const RepoHomepage = styled.li`
@@ -166,13 +161,13 @@ export const RepoLink = styled.a`
   @media (max-width: ${({ theme }) => theme.breakPoints.mobileXl}px) {
     font-size: 14px;
     word-wrap: break-word;
-  }
+  };
 
   &:hover {
     filter: brightness(115%);
-  }
+  };
 
   &:focus-visible {
     filter: brightness(115%);
-  }
+  };
 `;

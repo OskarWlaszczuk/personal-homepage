@@ -34,7 +34,7 @@ export const List = styled.ul`
     padding-left: 0px;
     list-style-position: inside;
 
-    @media (max-width: ${({ theme }) => theme.breakPoints.laptop}px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.laptopL}px) {
         grid-template-columns: repeat(2, auto);
    };
 

@@ -28,7 +28,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-items: center;
     width: 100%;
 
-    @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.laptopM}px) {
       grid-gap: 48px;
     };
 

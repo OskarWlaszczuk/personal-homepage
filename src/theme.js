@@ -1,7 +1,8 @@
 export const breakPoints = {
   breakPoints: {
-    laptop: 1100,
-    smallLaptop: 950,
+    laptopL: 1100,
+    laptopM: 950,
+    laptopS: 830,
     tablet: 730,
     mobileXl: 550,
     mobile: 350,

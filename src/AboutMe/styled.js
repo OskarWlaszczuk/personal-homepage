@@ -6,7 +6,7 @@ export const Section = styled.section`
   grid-template-columns: auto 1fr;
   justify-self: baseline;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.laptopM}px) {
     grid-template-columns: 1fr;
     grid-gap: 16px;
     width: 100%;
@@ -37,7 +37,7 @@ export const Image = styled.img`
   max-height: 398px;
   border-radius: 50%;
 
-  @media (max-width: ${({ theme }) => theme.breakPoints.smallLaptop}px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.laptopM}px) {
     margin: auto;
   };
 
