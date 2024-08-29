@@ -9,14 +9,13 @@ export const ToggleThemeButton = ({ isDarkTheme, setIsDarkTheme }) => {
 
   const toggleThemeHandler = () => setIsDarkTheme(currentTheme => !currentTheme);
 
+  const captionContent = <>DARK MODE {isDarkTheme ? <>ON</> : <>OFF</>}</>;
+  const ToggleThemeButtonComponent = isDarkTheme ? StyledDarkThemeOnButton : StyledLightThemeOnButton;
+  
   return (
     <Wrapper>
-      <Caption content={isDarkTheme ? <>DARK MODE ON</> : <>DARK MODE OFF</>} />
-      {isDarkTheme ? (
-        <StyledDarkThemeOnButton onClick={toggleThemeHandler} />
-      ) : (
-        <StyledLightThemeOnButton onClick={toggleThemeHandler} />
-      )}
+      <Caption content={captionContent} />
+      <ToggleThemeButtonComponent onClick={toggleThemeHandler} />
     </Wrapper>
   );
 };
