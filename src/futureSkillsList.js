@@ -1,8 +1,5 @@
 export const futureSkillsList = [
-    "React Context",
+    "Machine Learning",
     "Node.js",
-    "Cypress",
-    "Unit testing",
-    "Typescript",
-    "JS classes",
+    "Next.js",
 ];
